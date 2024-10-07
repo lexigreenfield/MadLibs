@@ -25,9 +25,42 @@ public class MadLibs {
                 + pluralNounInput + madLib1.substring(pluralNounIndex2, numberIndex) + numberInput
                 + madLib1.substring(numberIndex2));
 
+        System.out.println("Original story of MadLib 2: " + madLib2);
+        System.out.println("Enter an adjective: ");
+        nounInput = scanner.nextLine();
+        System.out.println("Enter a noun: ");
+        pluralNounInput = scanner.nextLine();
+        System.out.println("Enter an adverb: ");
+        numberInput = scanner.nextLine();
+        nounIndex = madLib2.indexOf("<adjective>");
+        pluralNounIndex = madLib2.indexOf("<noun>");
+        numberIndex = madLib2.indexOf("<adverb>");
+        nounIndex2 = madLib2.indexOf(" land");
+        pluralNounIndex2 = madLib2.indexOf(" <adverb>");
+        numberIndex2 = madLib2.indexOf(" grew");
+        System.out.println(madLib2.substring(0, nounIndex) + nounInput + madLib2.substring(nounIndex2, pluralNounIndex)
+                + pluralNounInput + madLib2.substring(pluralNounIndex2, numberIndex) + numberInput
+                + madLib2.substring(numberIndex2));
+
         /*
-         * System.out.println("Original story of MadLib 2: " + madLib2);
-         * System.out.println("Original story of MadLib 3: " + madLib3);
+         * System.out.println("Enter an adjective: ");
+         * String adjective2Input = scanner.nextLine();
+         * System.out.println("Enter a noun: ");
+         * String noun2Input = scanner.nextLine();
+         * System.out.println("Enter an adverb: ");
+         * String adverb2Input = scanner.nextLine();
+         * int adjective2Index = madLib2.indexOf("<adjective>");
+         * int noun2Index = madLib2.indexOf("<noun>");
+         * int adverb2Index = madLib2.indexOf("<adverb>");
+         * int adjective2Index2 = madLib2.indexOf(" land");
+         * int noun2Index2 = madLib2.indexOf(" <adverb>");
+         * int adverb2Index2 = madLib2.indexOf(" grew");
+         * System.out.println(madLib2.substring(0, adjective2Index) + adjective2Input
+         * + madLib2.substring(adjective2Index2, noun2Index)
+         * + noun2Input + madLib2.substring(noun2Index2, adverb2Index) + adverb2Input
+         * + madLib2.substring(adverb2Index2));
          */
+
+        // System.out.println("Original story of MadLib 3: " + madLib3);
     }
 }
