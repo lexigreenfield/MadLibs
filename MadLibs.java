@@ -1,19 +1,22 @@
 import java.util.Scanner; //so I can use the scanner class
 
-public class MadLibs {
-    public static void main(String[] args) {
+public class MadLibs { // class definition header
+    public static void main(String[] args) { // main method
         Scanner scanner = new Scanner(System.in);
         String madLib1 = new String(
-                "I went to the animal <noun>, the <plural_noun> and the <number> beasts were there.");
+                "I went to the animal <noun>, the <plural_noun> and the <number> beasts were there."); // camelCase
         String madLib2 = "Once upon a time in a <adjective> land, a <noun> <adverb> grew.";
         String madLib3 = "I was late to school today because my <noun> <adverb> stole my <another_noun>."; // my
+                                                                                                           // variables
+                                                                                                           // containing
+                                                                                                           // the
                                                                                                            // incomplete
+                                                                                                           // madlibs'
                                                                                                            // stories
-                                                                                                           // strings
 
         System.out.println("Original story of MadLib 1: " + madLib1); // display original incomplete story
         System.out.println("Enter a noun: "); // prompts user for words
-        String nounInput = scanner.nextLine();
+        String nounInput = scanner.nextLine(); // algorithm to process user input
         System.out.println("Enter a plural noun: ");
         String pluralNounInput = scanner.nextLine();
         System.out.println("Enter a number: ");
@@ -24,7 +27,7 @@ public class MadLibs {
         int nounIndex2 = madLib1.indexOf(", the"); // this looks for where it ends, I'm sure there's an easier way to do
                                                    // this but I couldn't figure out how
         int pluralNounIndex2 = madLib1.indexOf(" and the");
-        int numberIndex2 = madLib1.indexOf(" beasts");
+        int numberIndex2 = madLib1.indexOf(" beasts"); // java quick reference methods index of and substring
         System.out.println(madLib1.substring(0, nounIndex) + nounInput + madLib1.substring(nounIndex2, pluralNounIndex)
                 + pluralNounInput + madLib1.substring(pluralNounIndex2, numberIndex) + numberInput
                 + madLib1.substring(numberIndex2)); // this replaces the <> parts with the user input by concatenating
@@ -64,7 +67,7 @@ public class MadLibs {
         numberIndex2 = madLib3.indexOf(".");
         System.out.println(madLib3.substring(0, nounIndex) + nounInput + madLib3.substring(nounIndex2, pluralNounIndex)
                 + pluralNounInput + madLib3.substring(pluralNounIndex2, numberIndex) + numberInput
-                + madLib3.substring(numberIndex2));
+                + madLib3.substring(numberIndex2)); // final displayed completed story
 
         System.out.println("The end!");
     }
