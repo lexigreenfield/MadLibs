@@ -6,7 +6,7 @@ public class MadLibs {
         String madLib1 = new String(
                 "I went to the animal <noun>, the <plural_noun> and the <number> beasts were there.");
         String madLib2 = "Once upon a time in a <adjective> land, a <noun> <adverb> grew.";
-        String madLib3 = "I was late to school today because my <noun> <adverb> stole my <noun>.";
+        String madLib3 = "I was late to school today because my <noun> <adverb> stole my <another_noun>.";
 
         System.out.println("Original story of MadLib 1: " + madLib1);
         System.out.println("Enter a noun: ");
@@ -42,25 +42,21 @@ public class MadLibs {
                 + pluralNounInput + madLib2.substring(pluralNounIndex2, numberIndex) + numberInput
                 + madLib2.substring(numberIndex2));
 
-        /*
-         * System.out.println("Enter an adjective: ");
-         * String adjective2Input = scanner.nextLine();
-         * System.out.println("Enter a noun: ");
-         * String noun2Input = scanner.nextLine();
-         * System.out.println("Enter an adverb: ");
-         * String adverb2Input = scanner.nextLine();
-         * int adjective2Index = madLib2.indexOf("<adjective>");
-         * int noun2Index = madLib2.indexOf("<noun>");
-         * int adverb2Index = madLib2.indexOf("<adverb>");
-         * int adjective2Index2 = madLib2.indexOf(" land");
-         * int noun2Index2 = madLib2.indexOf(" <adverb>");
-         * int adverb2Index2 = madLib2.indexOf(" grew");
-         * System.out.println(madLib2.substring(0, adjective2Index) + adjective2Input
-         * + madLib2.substring(adjective2Index2, noun2Index)
-         * + noun2Input + madLib2.substring(noun2Index2, adverb2Index) + adverb2Input
-         * + madLib2.substring(adverb2Index2));
-         */
-
-        // System.out.println("Original story of MadLib 3: " + madLib3);
+        System.out.println("Original story of MadLib 3: " + madLib3);
+        System.out.println("Enter a noun: ");
+        nounInput = scanner.nextLine();
+        System.out.println("Enter an adverb: ");
+        pluralNounInput = scanner.nextLine();
+        System.out.println("Enter another noun: ");
+        numberInput = scanner.nextLine();
+        nounIndex = madLib3.indexOf("<noun>");
+        pluralNounIndex = madLib3.indexOf("<adverb>");
+        numberIndex = madLib3.indexOf("<another_noun>");
+        nounIndex2 = madLib3.indexOf(" <adverb>");
+        pluralNounIndex2 = madLib3.indexOf(" stole");
+        numberIndex2 = madLib3.indexOf(".");
+        System.out.println(madLib3.substring(0, nounIndex) + nounInput + madLib3.substring(nounIndex2, pluralNounIndex)
+                + pluralNounInput + madLib3.substring(pluralNounIndex2, numberIndex) + numberInput
+                + madLib3.substring(numberIndex2));
     }
 }
